@@ -56,7 +56,7 @@ export default function App({ Component, pageProps }) {
     return course;
   }
 
-  async function useUpdateAllCourses() {
+  async function updateAllCourses() {
     const updatedCourses = await Promise.all(
       courses.map(async (c) => {
         const currentStatus = await getStatus(c.url, c.css);
@@ -95,7 +95,7 @@ export default function App({ Component, pageProps }) {
       initialCourses={initialCourses}
       courses={courses}
       onAddCourse={handleAddCourse}
-      UpdateAllCourses={useUpdateAllCourses}
+      updateAllCourses={updateAllCourses}
       handleToggleAlarm={onToggleAlarm}
       handleDeleteCourse={handleDeleteCourse}
     />

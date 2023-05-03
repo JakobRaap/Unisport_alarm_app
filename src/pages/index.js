@@ -12,17 +12,17 @@ const soundUrl = "./alarm.mp3";
 export default function Home({
   onAddCourse,
   courses,
-  UpdateAllCourses,
+  updateAllCourses,
   handleToggleAlarm,
   handleDeleteCourse,
 }) {
   const [play] = useSound(soundUrl);
   useEffect(() => {
-    UpdateAllCourses();
+    updateAllCourses();
   }, []);
 
   useEffect(() => {
-    const updateCoursesInterval = setInterval(useUpdateAllCourses, 10000);
+    const updateCoursesInterval = setInterval(updateAllCourses, 10000);
     const playAlarmInterval = setInterval(() => {
       const filteredCourses = courses.filter((course) => course.alarm == true);
       console.warn(filteredCourses);
@@ -36,7 +36,7 @@ export default function Home({
       clearInterval(updateCoursesInterval);
       clearInterval(playAlarmInterval);
     };
-  }, [courses, handleToggleAlarm, play, useUpdateAllCourses]);
+  }, [courses, handleToggleAlarm, play, updateAllCourses]);
 
   return (
     <>
