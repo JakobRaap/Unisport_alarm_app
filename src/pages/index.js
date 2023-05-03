@@ -12,13 +12,13 @@ const soundUrl = "./alarm.mp3";
 export default function Home({
   onAddCourse,
   courses,
-  useUpdateAllCourses,
+  UpdateAllCourses,
   handleToggleAlarm,
   handleDeleteCourse,
 }) {
   const [play] = useSound(soundUrl);
   useEffect(() => {
-    useUpdateAllCourses();
+    UpdateAllCourses();
   }, []);
 
   useEffect(() => {

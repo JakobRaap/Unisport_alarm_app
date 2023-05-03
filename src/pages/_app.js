@@ -95,7 +95,7 @@ export default function App({ Component, pageProps }) {
       initialCourses={initialCourses}
       courses={courses}
       onAddCourse={handleAddCourse}
-      useUpdateAllCourses={useUpdateAllCourses}
+      UpdateAllCourses={useUpdateAllCourses}
       handleToggleAlarm={onToggleAlarm}
       handleDeleteCourse={handleDeleteCourse}
     />
