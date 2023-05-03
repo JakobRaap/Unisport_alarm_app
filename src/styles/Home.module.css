@@ -47,11 +47,16 @@
 }
 
 .card {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   padding: 1rem 1.2rem;
   border-radius: var(--border-radius);
-  background: rgba(var(--card-rgb), 0);
+  background: rgb(235, 232, 236);
   border: 1px solid rgba(var(--card-border-rgb), 0);
   transition: background 200ms, border 200ms;
+  margin: 5%;
+  align-items: center;
+  box-shadow: 1px 1px 2px 2px rgb(197, 196, 196);
 }
 
 .card span {
@@ -97,7 +102,7 @@
 
 .center::before,
 .center::after {
-  content: '';
+  content: "";
   left: 50%;
   position: absolute;
   filter: blur(45px);
