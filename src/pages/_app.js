@@ -43,6 +43,22 @@ export default function App({ Component, pageProps }) {
       status: "unknown",
       alarm: false,
     },
+    {
+      id: 6,
+      kurs: "Beach 1 Mo 16:00",
+      url: "https://buchung.hochschulsport-hamburg.de/angebote/Sommersemester_2023/_Volleyball.html",
+      css: "#bs_tr515CF650E6 > td:nth-child(9) > input:nth-child(2)",
+      status: "unknown",
+      alarm: false,
+    },
+    {
+      id: 7,
+      kurs: "Beach 1 Mi 19:00",
+      url: "https://buchung.hochschulsport-hamburg.de/angebote/Sommersemester_2023/_Volleyball.html",
+      css: "#bs_tr515CF6AD28 > td:nth-child(9) > input:nth-child(2)",
+      status: "unknown",
+      alarm: false,
+    },
   ];
 
   const [courses, setCourses] = useState(initialCourses);
